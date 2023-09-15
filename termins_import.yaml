@@ -1,0 +1,11 @@
+version: 1
+source: DataHub
+owners:
+  users:
+    - DataHub
+nodes:
+  - name: Русина_группа_из_файла
+    description: Русина_группа_из_файла_описание
+    terms:
+      - name: Русина_термин_1_из_файла
+        description: Русина_термин_1_из_файла_описание
