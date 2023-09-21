@@ -1,6 +1,0 @@
-source:
-  type: datahub-business-glossary
-  config:
-    # Coordinates
-    file: https://github.com/MR-crt/MR-crt.github.io/blob/main/termins_import.yaml
-    enable_auto_id: true
