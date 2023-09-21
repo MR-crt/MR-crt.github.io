@@ -1,5 +1,5 @@
 source:
-  type: datahub-business-glossary_2
+  type: datahub-business-glossary
   config:
     file: https://github.com/MR-crt/MR-crt.github.io/blob/main/Datahub_bg/termins_import.yaml
     enable_auto_id: true
