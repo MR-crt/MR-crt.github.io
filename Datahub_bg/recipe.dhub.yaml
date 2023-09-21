@@ -3,3 +3,8 @@ source:
   config:
     file: https://github.com/MR-crt/MR-crt.github.io/blob/main/Datahub_bg/termins_import.yaml
     enable_auto_id: true
+sink:
+  type: datahub-rest
+  config:
+      server: http://localhost:8080
+      token: eyJhbGciOiJIUzI1NiJ9.eyJhY3RvclR5cGUiOiJVU0VSIiwiYWN0b3JJZCI6ImRhdGFodWIiLCJ0eXBlIjoiUEVSU09OQUwiLCJ2ZXJzaW9uIjoiMiIsImp0aSI6IjMwM2RiY2M2LTBjYzUtNDcyOC1iNDMxLTA0M2UyYWNlMmFhMSIsInN1YiI6ImRhdGFodWIiLCJpc3MiOiJkYXRhaHViLW1ldGFkYXRhLXNlcnZpY2UifQ.kvz4aHGt2DCmaKf_YUI12Xz-_jQgJqG9vQhRB1dKV90
