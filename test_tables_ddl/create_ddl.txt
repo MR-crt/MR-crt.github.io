@@ -1,0 +1,17 @@
+CREATE TABLE rusina_test.fct_current_weather (
+	hash_id numeric NOT NULL,
+	temperature numeric(12, 4) NULL,
+	windspeed numeric(12, 4) NULL,
+	winddirection numeric(12, 4) NULL,
+	timez text NULL,
+	latitude numeric(8, 2) NULL,
+	longitude numeric(8, 2) NULL,
+	CONSTRAINT fct_current_weather_pk PRIMARY KEY (hash_id)
+);
+
+CREATE TABLE rusina_test.dic_location (
+	latitude numeric(8, 2) NULL,
+	longitude numeric(8, 2) NULL,
+	location_name text NULL,
+	loc_id int4 NULL
+);
