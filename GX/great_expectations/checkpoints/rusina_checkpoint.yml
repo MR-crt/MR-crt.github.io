@@ -21,18 +21,20 @@ action_list:
       module_name: datahub.integrations.great_expectations.action
       class_name: DataHubValidationAction
       server_url: http://10.1.108.29:8080
+      token: eyJhbGciOiJIUzI1NiJ9.eyJhY3RvclR5cGUiOiJVU0VSIiwiYWN0b3JJZCI6ImRhdGFodWIiLCJ0eXBlIjoiUEVSU09OQUwiLCJ2ZXJzaW9uIjoiMiIsImp0aSI6IjMwM2RiY2M2LTBjYzUtNDcyOC1iNDMxLTA0M2UyYWNlMmFhMSIsInN1YiI6ImRhdGFodWIiLCJpc3MiOiJkYXRhaHViLW1ldGFkYXRhLXNlcnZpY2UifQ.kvz4aHGt2DCmaKf_YUI12Xz-_jQgJqG9vQhRB1dKV90
+      parse_table_names_from_sql: True
+      platform_instance_map: { "my_postgres_datasource": "my_postgres_datasource" }
 evaluation_parameters: {}
 runtime_configuration: {}
 validations:
   - batch_request:
       datasource_name: my_postgres_datasource
       data_connector_name: default_runtime_data_connector_name
-      data_asset_name: fct_current_weather
+      data_asset_name: rusina_test.fct_current_weather
       runtime_parameters:
-        query: SELECT * from rusina_test.fct_current_weather
-      batch_identifiers:
-        default_identifier_name: default_identifier
-      batch_spec_passthrough:
+        query: select * from rusina_test.fct_current_weather
+      batch_identifiers: 
+        default_identifier_name:  default_identifier
     expectation_suite_name: rusina_test_suite
 profilers: []
 ge_cloud_id:
