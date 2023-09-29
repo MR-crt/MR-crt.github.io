@@ -1,0 +1,21 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "postgresql_kafka_fct_current_weather",
+  "expectations": [],
+  "ge_cloud_id": null,
+  "meta": {
+    "citations": [
+      {
+        "batch_request": {
+          "data_asset_name": "fct_current_weather",
+          "data_connector_name": "default_configured_data_connector_name",
+          "datasource_name": "postgresql_kafka",
+          "limit": 1000
+        },
+        "citation_date": "2023-09-29T14:39:04.844619Z",
+        "comment": "Created suite added via CLI"
+      }
+    ],
+    "great_expectations_version": "0.15.50"
+  }
+}
