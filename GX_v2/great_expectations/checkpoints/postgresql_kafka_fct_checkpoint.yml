@@ -1,0 +1,40 @@
+name: postgresql_kafka_fct_checkpoint
+config_version: 1.0
+template_name:
+module_name: great_expectations.checkpoint
+class_name: Checkpoint
+run_name_template: '%Y%m%d-%H%M%S-my-run-name-template'
+expectation_suite_name:
+batch_request: {}
+action_list:
+  - name: store_validation_result
+    action:
+      class_name: StoreValidationResultAction
+  - name: store_evaluation_params
+    action:
+      class_name: StoreEvaluationParametersAction
+  - name: update_data_docs
+    action:
+      class_name: UpdateDataDocsAction
+      site_names: []
+  - name: datahub_action
+    action:
+      module_name: datahub.integrations.great_expectations.action
+      class_name: DataHubValidationAction
+      server_url: http://10.1.108.29:8080
+      token: eyJhbGciOiJIUzI1NiJ9.eyJhY3RvclR5cGUiOiJVU0VSIiwiYWN0b3JJZCI6ImRhdGFodWIiLCJ0eXBlIjoiUEVSU09OQUwiLCJ2ZXJzaW9uIjoiMiIsImp0aSI6IjMwM2RiY2M2LTBjYzUtNDcyOC1iNDMxLTA0M2UyYWNlMmFhMSIsInN1YiI6ImRhdGFodWIiLCJpc3MiOiJkYXRhaHViLW1ldGFkYXRhLXNlcnZpY2UifQ.kvz4aHGt2DCmaKf_YUI12Xz-_jQgJqG9vQhRB1dKV90
+      parse_table_names_from_sql: True
+      platform_instance_map: { "postgresql_kafka": "postgresql_kafka" } 
+evaluation_parameters: {}
+runtime_configuration: {}
+validations:
+  - batch_request:
+      datasource_name: postgresql_kafka
+      data_connector_name: default_inferred_data_connector_name
+      data_asset_name: rusina_test.fct_current_weather
+      data_connector_query:
+        index: -1
+    expectation_suite_name: postgresql_kafka_fct_current_weather
+profilers: []
+ge_cloud_id:
+expectation_suite_ge_cloud_id:
