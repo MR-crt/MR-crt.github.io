@@ -1,0 +1,9 @@
+name: "hello_world"
+source:
+  type: "kafka"
+  config:
+    connection:
+      bootstrap: ${KAFKA_BOOTSTRAP_SERVER:-10.1.108.29:9092}
+      schema_registry_url: ${SCHEMA_REGISTRY_URL:-http://10.1.108.29:8081}
+action:
+  type: "hello_world"
